@@ -4,7 +4,7 @@ Eric Chen, Ruijia Xiao
 
 ## Introduction
 
-The dataset of the League of Legends 2022 Competitive Matches records all the matches took place in Season 2022 from Year 2022 to 2023. It records the statistics of competitions from 49 leagues, 595 teams. In our report, we study the relationship between team KDR, the ratio between team’s total kills and team’s total death, and playoffs. This is a meaningful question to ask because playoffs are the most popular contests between the strongest teams within each leagues, and players are so eager to win in order to get to tickets to the World Championship. In that case, the performances of each team matter a lot. There are 149400 rows in the datasets, and we have selected out 5 columns “datacompleteness”, “teamname”, “playoffs”, “teamkills” , “teamdeaths”.
+The dataset of the League of Legends 2022 Competitive Matches records all the matches took place in Season 2022 from Year 2022 to 2023. It records the statistics of competitions from 49 leagues, 595 teams. Among those matches, playoff games are often more competitive than non-playoff games, so we wonder if the difference in strength of two sides is different between non-playoff games and playoff matches. To explore this question, we choose to test the relationship between KDR, the ratio between team’s total kills and team’s total death, and playoffs. The reason why we choose to do research on those data is the teams with higher tier tend to have higher KDR in their matches, so KDR can be a straightforward measurement for us to find out the difference in strength of two sides. And for the dataset we used for this research, there are 149400 rows in total, and we have selected out 5 columns “datacompleteness”, “teamname”, “playoffs”, “teamkills”, “teamdeaths”.
 
 ## Cleaning and EDA
 
@@ -79,7 +79,7 @@ This histogram plot shows the distribution of playoff when teamname is missing.
 This histogram plot shows the distribution of playoff when teamname is not missing .
 
 
-<iframe src="assets/G10.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/G12.html" width=800 height=600 frameBorder=0></iframe>
 
 This histogram plot shows the distribution of difference in mean in permutation test.
 
