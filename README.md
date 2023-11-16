@@ -57,4 +57,36 @@ This scatter plot shows the relationship between KDR and playoffs.
 | playoffs| False    | True     |
 | KDR     | 1.731432 | 1.710219 |
 
-This is the pivot table of the mean KDR grouped by playoffs
+This is the pivot table of the mean KDR grouped by playoffs.
+
+## Assessment of Missingness
+
+### NMAR Analysis
+
+Among the column we selected, we believe there is no column that has a NMAR missingness type. In those selected columns, teamname is the only column has missing values. After we analyzing the match time, we can conclude that it is unlikely to be the same team that has lost the data because the time between two lost data is too close. And When diving into the other columns, we found out that all of the missing teams came from PRM league, which is not a famous league in the world. So we guess the possible reason why it is missing is because that league does not have a complete and well-preserved database that might cause the lost of teamname data. Therefore, there is no NMAR missingness type in the selected colums.
+
+### Missingness Dependency
+
+Among the column we selected, teamname is the only column has missing values. Firsty, after analyzing the dataframe, we can determine that this missing type cannot be missing by design. Then, based on the illustration above, we know that this column is not NMAR. So for the next step, we want to check if it is MAR. To check this hypothesis, among the columns we selected, we present the question that if the teamname is depend on playoff. So the null hypothesis we have is "The missing of teamname is not depend on the playoffs", and the Alt hypothesis is "The missing of teamname is depend on the playoffs". After we performing our permutation testing, the p value we got is 0.0, which is smaller 0.05. Therefore, we reject the null hypothesis and we can conlcude that its missingness type is MAR.
+
+<iframe src="assets/G7.html" width=800 height=600 frameBorder=0></iframe>
+
+This histogram plot shows the distribution of playoff when teamname is missing.
+
+
+<iframe src="assets/G8.html" width=800 height=600 frameBorder=0></iframe>
+
+This histogram plot shows the distribution of playoff when teamname is not missing .
+
+<iframe src="assets/G9.html" width=800 height=600 frameBorder=0></iframe>
+
+This histogram plot shows the distribution of playoff when teamname is missing in one of the permutation test.
+
+
+<iframe src="assets/G10.html" width=800 height=600 frameBorder=0></iframe>
+
+This histogram plot shows the distribution of playoff when teamname is not missing in one of the permutation test.
+
+The observed result is 0.17122654774818208, and in this one permutation test result we get is 0.00012052549114138777.
+
+And the overall test rate we have is 0.0.
