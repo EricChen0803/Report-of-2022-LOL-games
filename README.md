@@ -31,3 +31,15 @@ Here is the head of the dataset after our cleaning:
 <iframe src="assets/G3.html" width=800 height=600 frameBorder=0></iframe>
 
 <iframe src="assets/G4.html" width=800 height=600 frameBorder=0></iframe>
+
+### Bivariate Analysis
+
+<iframe src="assets/G5.html" width=800 height=600 frameBorder=0></iframe>
+
+<iframe src="assets/G6.html" width=800 height=600 frameBorder=0></iframe>
+
+### Interesting Aggregates
+
+<iframe src="assets/G7.html" width=800 height=600 frameBorder=0></iframe>
+
+<iframe src="assets/G8.html" width=800 height=600 frameBorder=0></iframe>
