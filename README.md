@@ -54,10 +54,7 @@ This scatter plot shows the relationship between KDR and playoffs.
 
 ### Interesting Aggregates
 
-<iframe src="assets/G7.html" width=800 height=600 frameBorder=0></iframe>
+| playoffs| False    | True     |
+| KDR     | 1.731432 | 1.710219 |
 
-This scatter plot shows KDR only in playoff matches.
-
-<iframe src="assets/G8.html" width=800 height=600 frameBorder=0></iframe>
-
-This scatter plot shows KDR only in non-playoff matches.
+This is the pivot table of the mean KDR grouped by playoffs
