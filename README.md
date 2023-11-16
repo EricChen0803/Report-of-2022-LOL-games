@@ -26,20 +26,38 @@ Here is the head of the dataset after our cleaning:
 
 <iframe src="assets/G1.html" width=800 height=600 frameBorder=0></iframe>
 
+The Teamkills distribution is skewed to right. Most values are concentrated within the interval from 5 to 30, and have a mean and median between 10 to 20.
+
 <iframe src="assets/G2.html" width=800 height=600 frameBorder=0></iframe>
+
+
+The Teamdeaths distribution looks very similar to Teamkills distribution. Most values are concentrated within the interval from 5 to 30, and have a mean and median between 10 to 20.
 
 <iframe src="assets/G3.html" width=800 height=600 frameBorder=0></iframe>
 
+This pie plot shows that the distribution of playoffs in all matches, around 17.1% of the matches are playoffs, and the rest 82.9% are non-playoff matches.
+
 <iframe src="assets/G4.html" width=800 height=600 frameBorder=0></iframe>
+
+The KDR (the ratio between Teamkills and Teamdeaths) distribution is skewed to right. Most teams’ KDR are between 0 to 5. 
 
 ### Bivariate Analysis
 
 <iframe src="assets/G5.html" width=800 height=600 frameBorder=0></iframe>
 
+This scatter plot shows the relationship between Teamkills and Teamdeaths. Most values are between 0 to 40.
+
+
 <iframe src="assets/G6.html" width=800 height=600 frameBorder=0></iframe>
+
+This scatter plot shows the relationship between KDR and playoffs. 
 
 ### Interesting Aggregates
 
 <iframe src="assets/G7.html" width=800 height=600 frameBorder=0></iframe>
 
+This scatter plot shows KDR only in playoff matches.
+
 <iframe src="assets/G8.html" width=800 height=600 frameBorder=0></iframe>
+
+This scatter plot shows KDR only in non-playoff matches.
