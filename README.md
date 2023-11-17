@@ -2,15 +2,27 @@
 
 Eric Chen, Ruijia Xiao
 
+## Project Overview
+
+This is a data science project on studying if the strength difference of two sides of the match is different between playoff matches and non-playoff matches. This data set of Year 2022 was  download from [https://drive.google.com/drive/u/1/folders/1gLSw0RLjBbtaNy0dgnGQDAZOHIgCe-HH]. This project is for DSC 80 course in UCSD.
+
 ## Introduction
 
-The dataset of the League of Legends 2022 Competitive Matches records all the matches took place in Season 2022 from Year 2022 to 2023. It records the statistics of competitions from 49 leagues, 595 teams. Among those matches, playoff games are often more competitive than non-playoff games, so we wonder if the difference in strength of two sides is different between non-playoff games and playoff matches. To explore this question, we choose to test the relationship between KDR, the ratio between team’s total kills and team’s total death, and playoffs. The reason why we choose to do research on those data is the teams with higher tier tend to have higher KDR in their matches, so KDR can be a straightforward measurement for us to find out the difference in strength of two sides. And for the dataset we used for this research, there are 149400 rows in total, and we have selected out 5 columns “datacompleteness”, “teamname”, “playoffs”, “teamkills”, “teamdeaths”.
+The dataset of the League of Legends 2022 Competitive Matches records all the matches took place in Season 2022 from Year 2022 to 2023. It records the statistics of competitions from 49 leagues, 595 teams. Among those matches, playoff games are often more competitive than non-playoff games, **so we wonder if the difference in strength of two sides is different between non-playoff games and playoff matches.** To explore this question, **we choose to test the relationship between KDR, the ratio between team’s total kills and team’s total death, and playoffs.** The reason why we choose to do research on those data is the teams with higher tier tend to have higher KDR in their matches, so KDR can be a straightforward measurement for us to find out the difference in strength of two sides. And for the dataset we used for this research, there are 149400 rows in total, and we have selected out 5 columns “datacompleteness”, “teamname”, “playoffs”, “teamkills”, “teamdeaths”.
 
 ## Cleaning and EDA
 
 ### Data cleaning
 
-Firstly, we clean the teamname column by setting the Nan value to 'MISSING'. Then, we find out that the playoffs column is not bool, so we convert it to boolean to make it reasonable. And our exploration question requires KDR of the teams in each matches, which are not included in the dataset, so we made a new column of KDR. In this process, the problem is that some teams have 0 death in one match, which can cause the original formula: teamkills/teamdeath have infinity. So we did some research and find out that when calculating KDR, people use 1 death to represent 0 death, so we defined a new function that convert 0 to 1 death when calculating KDR. At last, we grab the column we want from the dataset: 'datacompleteness', 'teamname', 'playoffs', 'teamkills', 'teamdeaths', 'KDR'.
+In this project, we choose to use these columns from the dataset: 'datacompleteness', 'teamname', 'playoffs', 'teamkills', 'teamdeaths'.
+
+|'datacompleteness'|       if the data is complete        |
+|   'teamname'     |       the teamname of the matches    |
+|   'playoffs'     |1 if the game is playoffs, 0 otherwise|
+|   'teamkills'    | the total number of kills in the game|
+|   'teamdeaths'   |the total number of deaths in the game|
+
+Firstly, we clean the teamname column by setting the Nan value to 'MISSING'. Then, we find out that the playoffs column is not bool, so we convert it to boolean to make it reasonable. And our exploration question requires KDR of the teams in each matches, which are not included in the dataset, so we made a new column of KDR. In this process, the problem is that some teams have 0 death in one match, which can cause the original formula: teamkills/teamdeath have infinity. So we did some research and find out that when calculating KDR, people use 1 death to represent 0 death, so we defined a new function that convert 0 to 1 death when calculating KDR. 
 
 Here is the head of the dataset after our cleaning:
 
@@ -55,7 +67,9 @@ This scatter plot shows the relationship between KDR and playoffs.
 ### Interesting Aggregates
 
 | playoffs| False    | True     |
-| KDR     | 1.731432 | 1.710219 |
+| mean    | 1.731432 | 1.710219 |
+| median  | 1.000000 | 1.000000 |
+| std     | 2.198689 | 2.166008 |
 
 This is the pivot table of the mean KDR grouped by playoffs.
 
