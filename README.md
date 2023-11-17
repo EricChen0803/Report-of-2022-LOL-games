@@ -4,7 +4,7 @@ Eric Chen, Ruijia Xiao
 
 ## Project Overview
 
-This is a data science project on studying if the strength difference of two sides of the match is different between playoff matches and non-playoff matches. This data set of Year 2022 was  download from [https://drive.google.com/drive/u/1/folders/1gLSw0RLjBbtaNy0dgnGQDAZOHIgCe-HH]. This project is for DSC 80 course in UCSD.
+This is a data science project on studying if the strength difference of two sides of the match is different between playoff matches and non-playoff matches. This data set of Year 2022 was  download from [https://drive.google.com/drive/u/1/folders/1gLSw0RLjBbtaNy0dgnGQDAZOHIgCe-HH](https://drive.google.com/drive/u/1/folders/1gLSw0RLjBbtaNy0dgnGQDAZOHIgCe-HH). This project is for DSC 80 course in UCSD.
 
 ## Introduction
 
